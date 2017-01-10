@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<Application xmlns='http://schemas.microsoft.com/windows/2009/Ribbon'>
+	<Application.Commands>
+<Command Name='cmdAppMenu' />
+
+<Command Name='cmdQAT' />
+
+<Command Name='cmdTab1' LabelTitle='Home' />
+	<Command Name='cmdTab1Group1' LabelTitle='&amp;Print' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+		<Command.SmallImages>
+			<Image>../res/document-print-small.bmp</Image>
+			<Image MinDPI='120'>../res/document-print.bmp</Image>
+		</Command.SmallImages>
+		<Command.LargeImages>
+			<Image>../res/document-print.bmp</Image>
+			<Image MinDPI='120'>../res/document-print-big.bmp</Image>
+		</Command.LargeImages>
+	</Command>
+
+<Command Name='cmdTab2' LabelTitle='Print Preview' />
+	<Command Name='cmdTab2Group1' LabelTitle='' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+		<Command.SmallImages>
+			<Image>../res/process-stop-small.bmp</Image>
+			<Image MinDPI='120'>../res/process-stop.bmp</Image>
+		</Command.SmallImages>
+		<Command.LargeImages>
+			<Image>../res/process-stop.bmp</Image>
+			<Image MinDPI='120'>../res/process-stop-big.bmp</Image>
+		</Command.LargeImages>
+	</Command>
+
+<Command Name='cmdPrintPreview' LabelTitle='P&amp;rint Preview' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+	<Command.SmallImages>
+		<Image>../res/document-print-preview-small.bmp</Image>
+		<Image MinDPI='120'>../res/document-print-preview.bmp</Image>
+	</Command.SmallImages>
+	<Command.LargeImages>
+		<Image>../res/document-print-preview.bmp</Image>
+		<Image MinDPI='120'>../res/document-print-preview-big.bmp</Image>
+	</Command.LargeImages>
+</Command>
+<Command Name='cmdClosePrintPreview' LabelTitle='&amp;Close' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+	<Command.SmallImages>
+		<Image>../res/process-stop-small.bmp</Image>
+		<Image MinDPI='120'>../res/process-stop.bmp</Image>
+	</Command.SmallImages>
+	<Command.LargeImages>
+		<Image>../res/process-stop.bmp</Image>
+		<Image MinDPI='120'>../res/process-stop-big.bmp</Image>
+	</Command.LargeImages>
+</Command>
+	</Application.Commands>
+
+	<Application.Views>
+		<Ribbon>
+			<Ribbon.ApplicationMenu>
+<ApplicationMenu CommandName='cmdAppMenu'>
+
+</ApplicationMenu>
+			</Ribbon.ApplicationMenu>
+
+			<Ribbon.QuickAccessToolbar>
+<QuickAccessToolbar CommandName='cmdQAT'>
+
+</QuickAccessToolbar>
+			</Ribbon.QuickAccessToolbar>
+
+			<Ribbon.Tabs>
+<Tab CommandName='cmdTab1'>
+	<Group CommandName='cmdTab1Group1' SizeDefinition='OneButton'>
+		<Button CommandName='cmdPrintPreview' />
+	</Group>
+</Tab>
+
+<Tab CommandName='cmdTab2' ApplicationModes='1'>
+	<Group CommandName='cmdTab2Group1' ApplicationModes='1' SizeDefinition='OneButton'>
+		<Button CommandName='cmdClosePrintPreview' />
+	</Group>
+</Tab>
+			</Ribbon.Tabs>
+		</Ribbon>
+	</Application.Views>
+</Application>

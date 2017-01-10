@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<Application xmlns='http://schemas.microsoft.com/windows/2009/Ribbon'>
+	<Application.Commands>
+<Command Name='cmdAppMenu' />
+
+<Command Name='cmdQAT' />
+
+<Command Name='cmdTab1' LabelTitle='Spinner' />
+	<Command Name='cmdTab1Group1' LabelTitle='&amp;Spinner' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...' />
+
+<Command Name='cmdSpinner1' LabelTitle='&amp;Spinner1' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...' />
+	</Application.Commands>
+
+	<Application.Views>
+		<Ribbon>
+			<Ribbon.ApplicationMenu>
+<ApplicationMenu CommandName='cmdAppMenu'>
+
+</ApplicationMenu>
+			</Ribbon.ApplicationMenu>
+
+			<Ribbon.QuickAccessToolbar>
+<QuickAccessToolbar CommandName='cmdQAT'>
+
+</QuickAccessToolbar>
+			</Ribbon.QuickAccessToolbar>
+
+			<Ribbon.Tabs>
+<Tab CommandName='cmdTab1'>
+	<Group CommandName='cmdTab1Group1'>
+		<Spinner CommandName='cmdSpinner1' />
+	</Group>
+</Tab>
+			</Ribbon.Tabs>
+		</Ribbon>
+	</Application.Views>
+</Application>

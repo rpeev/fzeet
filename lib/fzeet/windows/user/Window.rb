@@ -1,0 +1,5 @@
+require_relative 'Window/Window'
+require_relative 'Window/View'
+require_relative 'Window/Container'
+require_relative 'Window/MDI'
+require_relative 'Window/Dialog'

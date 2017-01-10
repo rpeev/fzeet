@@ -1,0 +1,253 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<Application xmlns='http://schemas.microsoft.com/windows/2009/Ribbon'>
+	<Application.Commands>
+<Command Name='cmdAppMenu' />
+
+<Command Name='cmdQAT' />
+
+<Command Name='cmdTab1' LabelTitle='Button' />
+	<Command Name='cmdTab1Group1' LabelTitle='&amp;Button' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+		<Command.SmallImages>
+			<Image>../../res/go-next-small.bmp</Image>
+			<Image MinDPI='120'>../../res/go-next.bmp</Image>
+		</Command.SmallImages>
+		<Command.LargeImages>
+			<Image>../../res/go-next.bmp</Image>
+			<Image MinDPI='120'>../../res/go-next-big.bmp</Image>
+		</Command.LargeImages>
+	</Command>
+	<Command Name='cmdTab1Group2' LabelTitle='&amp;DropDownButton' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+		<Command.SmallImages>
+			<Image>../../res/go-down-small.bmp</Image>
+			<Image MinDPI='120'>../../res/go-down.bmp</Image>
+		</Command.SmallImages>
+		<Command.LargeImages>
+			<Image>../../res/go-down.bmp</Image>
+			<Image MinDPI='120'>../../res/go-down-big.bmp</Image>
+		</Command.LargeImages>
+	</Command>
+	<Command Name='cmdTab1Group3' LabelTitle='&amp;SplitButton' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+		<Command.SmallImages>
+			<Image>../../res/go-jump-small.bmp</Image>
+			<Image MinDPI='120'>../../res/go-jump.bmp</Image>
+		</Command.SmallImages>
+		<Command.LargeImages>
+			<Image>../../res/go-jump.bmp</Image>
+			<Image MinDPI='120'>../../res/go-jump-big.bmp</Image>
+		</Command.LargeImages>
+	</Command>
+	<Command Name='cmdTab1Group4' LabelTitle='&amp;ToggleButton' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+		<Command.SmallImages>
+			<Image>../../res/audio-volume-muted-small.bmp</Image>
+			<Image MinDPI='120'>../../res/audio-volume-muted.bmp</Image>
+		</Command.SmallImages>
+		<Command.LargeImages>
+			<Image>../../res/audio-volume-muted.bmp</Image>
+			<Image MinDPI='120'>../../res/audio-volume-muted-big.bmp</Image>
+		</Command.LargeImages>
+	</Command>
+	<Command Name='cmdTab1Group5' LabelTitle='&amp;CheckBox' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+		<Command.SmallImages>
+			<Image>../../res/media-playback-pause-small.bmp</Image>
+			<Image MinDPI='120'>../../res/media-playback-pause.bmp</Image>
+		</Command.SmallImages>
+		<Command.LargeImages>
+			<Image>../../res/media-playback-pause.bmp</Image>
+			<Image MinDPI='120'>../../res/media-playback-pause-big.bmp</Image>
+		</Command.LargeImages>
+	</Command>
+
+<Command Name='cmdButton1' LabelTitle='&amp;Button1' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+	<Command.SmallImages>
+		<Image>../../res/go-next-small.bmp</Image>
+		<Image MinDPI='120'>../../res/go-next.bmp</Image>
+	</Command.SmallImages>
+	<Command.LargeImages>
+		<Image>../../res/go-next.bmp</Image>
+		<Image MinDPI='120'>../../res/go-next-big.bmp</Image>
+	</Command.LargeImages>
+</Command>
+<Command Name='cmdDrop1' LabelTitle='&amp;Drop1' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+	<Command.SmallImages>
+		<Image>../../res/go-down-small.bmp</Image>
+		<Image MinDPI='120'>../../res/go-down.bmp</Image>
+	</Command.SmallImages>
+	<Command.LargeImages>
+		<Image>../../res/go-down.bmp</Image>
+		<Image MinDPI='120'>../../res/go-down-big.bmp</Image>
+	</Command.LargeImages>
+</Command>
+<Command Name='cmdSplit1' LabelTitle='&amp;Split1' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+	<Command.SmallImages>
+		<Image>../../res/go-jump-small.bmp</Image>
+		<Image MinDPI='120'>../../res/go-jump.bmp</Image>
+	</Command.SmallImages>
+	<Command.LargeImages>
+		<Image>../../res/go-jump.bmp</Image>
+		<Image MinDPI='120'>../../res/go-jump-big.bmp</Image>
+	</Command.LargeImages>
+</Command>
+<Command Name='cmdToggle1' LabelTitle='&amp;Toggle1' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+	<Command.SmallImages>
+		<Image>../../res/audio-volume-muted-small.bmp</Image>
+		<Image MinDPI='120'>../../res/audio-volume-muted.bmp</Image>
+	</Command.SmallImages>
+	<Command.LargeImages>
+		<Image>../../res/audio-volume-muted.bmp</Image>
+		<Image MinDPI='120'>../../res/audio-volume-muted-big.bmp</Image>
+	</Command.LargeImages>
+</Command>
+<Command Name='cmdCheck1' LabelTitle='&amp;Check1' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+	<Command.SmallImages>
+		<Image>../../res/media-playback-pause-small.bmp</Image>
+		<Image MinDPI='120'>../../res/media-playback-pause.bmp</Image>
+	</Command.SmallImages>
+	<Command.LargeImages>
+		<Image>../../res/media-playback-pause.bmp</Image>
+		<Image MinDPI='120'>../../res/media-playback-pause-big.bmp</Image>
+	</Command.LargeImages>
+</Command>
+
+<Command Name='cmdHelp' LabelTitle='&amp;Help' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...' />
+
+<Command Name='cmdContextMap1' />
+	</Application.Commands>
+
+	<Application.Views>
+		<Ribbon>
+			<Ribbon.ApplicationMenu>
+<ApplicationMenu CommandName='cmdAppMenu'>
+	<MenuGroup Class='MajorItems'>
+		<Button CommandName='cmdButton1' />
+		<DropDownButton CommandName='cmdDrop1'>
+			<MenuGroup Class='MajorItems'>
+				<Button CommandName='cmdButton1' />
+			</MenuGroup>
+		</DropDownButton>
+		<SplitButton>
+			<SplitButton.ButtonItem>
+				<Button CommandName='cmdSplit1' />
+			</SplitButton.ButtonItem>
+			<SplitButton.MenuGroups>
+				<MenuGroup Class='MajorItems'>
+					<ToggleButton CommandName='cmdToggle1' />
+					<CheckBox CommandName='cmdCheck1' />
+				</MenuGroup>
+			</SplitButton.MenuGroups>
+		</SplitButton>
+		<!--<ToggleButton CommandName='cmdToggle1' />
+		<CheckBox CommandName='cmdCheck1' />-->
+	</MenuGroup>
+</ApplicationMenu>
+			</Ribbon.ApplicationMenu>
+
+			<Ribbon.QuickAccessToolbar>
+<QuickAccessToolbar CommandName='cmdQAT'>
+	<QuickAccessToolbar.ApplicationDefaults>
+		<Button CommandName='cmdButton1' />
+	</QuickAccessToolbar.ApplicationDefaults>
+</QuickAccessToolbar>
+			</Ribbon.QuickAccessToolbar>
+
+			<Ribbon.Tabs>
+<Tab CommandName='cmdTab1'>
+	<Group CommandName='cmdTab1Group1' SizeDefinition='OneButton'>
+		<Button CommandName='cmdButton1' />
+	</Group>
+
+	<Group CommandName='cmdTab1Group2' SizeDefinition='OneButton'>
+		<DropDownButton CommandName='cmdDrop1'>
+			<MenuGroup>
+				<Button CommandName='cmdButton1' />
+			</MenuGroup>
+		</DropDownButton>
+	</Group>
+
+	<Group CommandName='cmdTab1Group3' SizeDefinition='OneButton'>
+		<SplitButton>
+			<SplitButton.ButtonItem>
+				<Button CommandName='cmdSplit1' />
+			</SplitButton.ButtonItem>
+			<SplitButton.MenuGroups>
+				<MenuGroup>
+					<ToggleButton CommandName='cmdToggle1' />
+					<CheckBox CommandName='cmdCheck1' />
+				</MenuGroup>
+			</SplitButton.MenuGroups>
+		</SplitButton>
+	</Group>
+
+	<Group CommandName='cmdTab1Group4' SizeDefinition='OneButton'>
+		<ToggleButton CommandName='cmdToggle1' />
+	</Group>
+
+	<Group CommandName='cmdTab1Group5'>
+		<CheckBox CommandName='cmdCheck1' />
+	</Group>
+</Tab>
+			</Ribbon.Tabs>
+
+			<Ribbon.HelpButton>
+				<HelpButton CommandName='cmdHelp' />
+			</Ribbon.HelpButton>
+		</Ribbon>
+
+		<ContextPopup>
+			<ContextPopup.MiniToolbars>
+<MiniToolbar Name='miniToolbar1'>
+	<MenuGroup>
+		<Button CommandName='cmdButton1' />
+		<DropDownButton CommandName='cmdDrop1'>
+			<MenuGroup>
+				<Button CommandName='cmdButton1' />
+			</MenuGroup>
+		</DropDownButton>
+		<SplitButton>
+			<SplitButton.ButtonItem>
+				<Button CommandName='cmdSplit1' />
+			</SplitButton.ButtonItem>
+			<SplitButton.MenuGroups>
+				<MenuGroup>
+					<ToggleButton CommandName='cmdToggle1' />
+					<CheckBox CommandName='cmdCheck1' />
+				</MenuGroup>
+			</SplitButton.MenuGroups>
+		</SplitButton>
+		<ToggleButton CommandName='cmdToggle1' />
+		<CheckBox CommandName='cmdCheck1' />
+	</MenuGroup>
+</MiniToolbar>
+			</ContextPopup.MiniToolbars>
+
+			<ContextPopup.ContextMenus>
+<ContextMenu Name='contextMenu1'>
+	<MenuGroup>
+		<Button CommandName='cmdButton1' />
+		<DropDownButton CommandName='cmdDrop1'>
+			<MenuGroup>
+				<Button CommandName='cmdButton1' />
+			</MenuGroup>
+		</DropDownButton>
+		<SplitButton>
+			<SplitButton.ButtonItem>
+				<Button CommandName='cmdSplit1' />
+			</SplitButton.ButtonItem>
+			<SplitButton.MenuGroups>
+				<MenuGroup>
+					<ToggleButton CommandName='cmdToggle1' />
+					<CheckBox CommandName='cmdCheck1' />
+				</MenuGroup>
+			</SplitButton.MenuGroups>
+		</SplitButton>
+		<ToggleButton CommandName='cmdToggle1' />
+		<CheckBox CommandName='cmdCheck1' />
+	</MenuGroup>
+</ContextMenu>
+			</ContextPopup.ContextMenus>
+
+			<ContextPopup.ContextMaps>
+<ContextMap CommandName='cmdContextMap1' MiniToolbar='miniToolbar1' ContextMenu='contextMenu1' />
+			</ContextPopup.ContextMaps>
+		</ContextPopup>
+	</Application.Views>
+</Application>

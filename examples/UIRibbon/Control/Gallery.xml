@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<Application xmlns='http://schemas.microsoft.com/windows/2009/Ribbon'>
+	<Application.Commands>
+<Command Name='cmdAppMenu' />
+
+<Command Name='cmdQAT' />
+
+<Command Name='cmdTab1' LabelTitle='Gallery' />
+	<Command Name='cmdTab1Group1' LabelTitle='In&amp;RibbonGallery' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+		<Command.SmallImages>
+			<Image>../../res/go-next-small.bmp</Image>
+			<Image MinDPI='120'>../../res/go-next.bmp</Image>
+		</Command.SmallImages>
+		<Command.LargeImages>
+			<Image>../../res/go-next.bmp</Image>
+			<Image MinDPI='120'>../../res/go-next-big.bmp</Image>
+		</Command.LargeImages>
+	</Command>
+	<Command Name='cmdTab1Group2' LabelTitle='&amp;DropDownGallery' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+		<Command.SmallImages>
+			<Image>../../res/go-down-small.bmp</Image>
+			<Image MinDPI='120'>../../res/go-down.bmp</Image>
+		</Command.SmallImages>
+		<Command.LargeImages>
+			<Image>../../res/go-down.bmp</Image>
+			<Image MinDPI='120'>../../res/go-down-big.bmp</Image>
+		</Command.LargeImages>
+	</Command>
+	<Command Name='cmdTab1Group3' LabelTitle='&amp;SplitButtonGallery' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+		<Command.SmallImages>
+			<Image>../../res/go-jump-small.bmp</Image>
+			<Image MinDPI='120'>../../res/go-jump.bmp</Image>
+		</Command.SmallImages>
+		<Command.LargeImages>
+			<Image>../../res/go-jump.bmp</Image>
+			<Image MinDPI='120'>../../res/go-jump-big.bmp</Image>
+		</Command.LargeImages>
+	</Command>
+
+<Command Name='cmdGallery1' LabelTitle='In&amp;Ribbon1' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+	<Command.SmallImages>
+		<Image>../../res/go-next-small.bmp</Image>
+		<Image MinDPI='120'>../../res/go-next.bmp</Image>
+	</Command.SmallImages>
+	<Command.LargeImages>
+		<Image>../../res/go-next.bmp</Image>
+		<Image MinDPI='120'>../../res/go-next-big.bmp</Image>
+	</Command.LargeImages>
+</Command>
+<Command Name='cmdGallery2' LabelTitle='&amp;Drop1' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+	<Command.SmallImages>
+		<Image>../../res/go-down-small.bmp</Image>
+		<Image MinDPI='120'>../../res/go-down.bmp</Image>
+	</Command.SmallImages>
+	<Command.LargeImages>
+		<Image>../../res/go-down.bmp</Image>
+		<Image MinDPI='120'>../../res/go-down-big.bmp</Image>
+	</Command.LargeImages>
+</Command>
+<Command Name='cmdGallery3' LabelTitle='&amp;Split1' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+	<Command.SmallImages>
+		<Image>../../res/go-jump-small.bmp</Image>
+		<Image MinDPI='120'>../../res/go-jump.bmp</Image>
+	</Command.SmallImages>
+	<Command.LargeImages>
+		<Image>../../res/go-jump.bmp</Image>
+		<Image MinDPI='120'>../../res/go-jump-big.bmp</Image>
+	</Command.LargeImages>
+</Command>
+
+<Command Name='cmdContextMap1' />
+	</Application.Commands>
+
+	<Application.Views>
+		<Ribbon>
+			<Ribbon.ApplicationMenu>
+<ApplicationMenu CommandName='cmdAppMenu'>
+	<MenuGroup Class='MajorItems'>
+		<DropDownGallery CommandName='cmdGallery2' />
+		<SplitButtonGallery CommandName='cmdGallery3' />
+	</MenuGroup>
+</ApplicationMenu>
+			</Ribbon.ApplicationMenu>
+
+			<Ribbon.QuickAccessToolbar>
+<QuickAccessToolbar CommandName='cmdQAT'>
+
+</QuickAccessToolbar>
+			</Ribbon.QuickAccessToolbar>
+
+			<Ribbon.Tabs>
+<Tab CommandName='cmdTab1'>
+	<Group CommandName='cmdTab1Group1'>
+		<InRibbonGallery CommandName='cmdGallery1' TextPosition='Bottom' MinColumnsLarge='2' />
+	</Group>
+
+	<Group CommandName='cmdTab1Group2' SizeDefinition='OneButton'>
+		<DropDownGallery CommandName='cmdGallery2' TextPosition='Hide' />
+	</Group>
+
+	<Group CommandName='cmdTab1Group3' SizeDefinition='OneButton'>
+		<SplitButtonGallery CommandName='cmdGallery3' TextPosition='Hide' />
+	</Group>
+</Tab>
+			</Ribbon.Tabs>
+		</Ribbon>
+
+		<ContextPopup>
+			<ContextPopup.MiniToolbars>
+<MiniToolbar Name='miniToolbar1'>
+	<MenuGroup>
+		<DropDownGallery CommandName='cmdGallery2' />
+		<SplitButtonGallery CommandName='cmdGallery3' />
+	</MenuGroup>
+</MiniToolbar>
+			</ContextPopup.MiniToolbars>
+
+			<ContextPopup.ContextMenus>
+<ContextMenu Name='contextMenu1'>
+	<MenuGroup>
+		<DropDownGallery CommandName='cmdGallery2' />
+		<SplitButtonGallery CommandName='cmdGallery3' />
+	</MenuGroup>
+</ContextMenu>
+			</ContextPopup.ContextMenus>
+
+			<ContextPopup.ContextMaps>
+<ContextMap CommandName='cmdContextMap1' MiniToolbar='miniToolbar1' ContextMenu='contextMenu1' />
+			</ContextPopup.ContextMaps>
+		</ContextPopup>
+	</Application.Views>
+</Application>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+	<head>
+		<title>jQueryUI</title>
+
+		<link rel='stylesheet' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/smoothness/jquery-ui.css' />
+
+		<style>
+* {
+	font-size: small;
+}
+
+#themeswitcher {
+	float: right;
+}
+
+#tabs {
+	clear: both;
+}
+		</style>
+
+		<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+		<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js'></script>
+
+		<script src='http://jqueryui.com/themeroller/themeswitchertool/'></script>
+
+		<script>
+jQuery(function (j) {
+	j('#themeswitcher').themeswitcher({width: 250, height: 600, closeOnSelect: false});
+
+	j('#tabs').tabs();
+});
+		</script>
+	</head>
+	<body>
+<div id='themeswitcher'></div>
+
+<div id='tabs'>
+	<ul>
+		<li><a id='tab1' href='#page1'>tab1</a></li>
+		<li><a id='tab2' href='#page2'>tab2</a></li>
+	</ul>
+
+	<div id='page1'>
+Page1...
+	</div>
+
+	<div id='page2'>
+Page2...
+	</div>
+</div>
+	</body>
+</html>

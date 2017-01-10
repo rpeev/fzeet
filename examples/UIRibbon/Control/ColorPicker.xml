@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<Application xmlns='http://schemas.microsoft.com/windows/2009/Ribbon'>
+	<Application.Commands>
+<Command Name='cmdAppMenu' />
+
+<Command Name='cmdQAT' />
+
+<Command Name='cmdTab1' LabelTitle='ColorPicker' />
+	<Command Name='cmdTab1Group1' LabelTitle='&amp;ThemeColors' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+		<Command.SmallImages>
+			<Image>../../res/applications-graphics-small.bmp</Image>
+			<Image MinDPI='120'>../../res/applications-graphics.bmp</Image>
+		</Command.SmallImages>
+		<Command.LargeImages>
+			<Image>../../res/applications-graphics.bmp</Image>
+			<Image MinDPI='120'>../../res/applications-graphics-big.bmp</Image>
+		</Command.LargeImages>
+	</Command>
+	<Command Name='cmdTab1Group2' LabelTitle='&amp;StandardColors' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+		<Command.SmallImages>
+			<Image>../../res/applications-graphics-small.bmp</Image>
+			<Image MinDPI='120'>../../res/applications-graphics.bmp</Image>
+		</Command.SmallImages>
+		<Command.LargeImages>
+			<Image>../../res/applications-graphics.bmp</Image>
+			<Image MinDPI='120'>../../res/applications-graphics-big.bmp</Image>
+		</Command.LargeImages>
+	</Command>
+	<Command Name='cmdTab1Group3' LabelTitle='&amp;HighlightColors' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+		<Command.SmallImages>
+			<Image>../../res/applications-graphics-small.bmp</Image>
+			<Image MinDPI='120'>../../res/applications-graphics.bmp</Image>
+		</Command.SmallImages>
+		<Command.LargeImages>
+			<Image>../../res/applications-graphics.bmp</Image>
+			<Image MinDPI='120'>../../res/applications-graphics-big.bmp</Image>
+		</Command.LargeImages>
+	</Command>
+
+<Command Name='cmdPicker1' LabelTitle='Picker&amp;1' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+	<Command.SmallImages>
+		<Image>../../res/applications-graphics-small.bmp</Image>
+		<Image MinDPI='120'>../../res/applications-graphics.bmp</Image>
+	</Command.SmallImages>
+	<Command.LargeImages>
+		<Image>../../res/applications-graphics.bmp</Image>
+		<Image MinDPI='120'>../../res/applications-graphics-big.bmp</Image>
+	</Command.LargeImages>
+</Command>
+<Command Name='cmdPicker2' LabelTitle='Picker&amp;2' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+	<Command.SmallImages>
+		<Image>../../res/applications-graphics-small.bmp</Image>
+		<Image MinDPI='120'>../../res/applications-graphics.bmp</Image>
+	</Command.SmallImages>
+	<Command.LargeImages>
+		<Image>../../res/applications-graphics.bmp</Image>
+		<Image MinDPI='120'>../../res/applications-graphics-big.bmp</Image>
+	</Command.LargeImages>
+</Command>
+<Command Name='cmdPicker3' LabelTitle='Picker&amp;3' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+	<Command.SmallImages>
+		<Image>../../res/applications-graphics-small.bmp</Image>
+		<Image MinDPI='120'>../../res/applications-graphics.bmp</Image>
+	</Command.SmallImages>
+	<Command.LargeImages>
+		<Image>../../res/applications-graphics.bmp</Image>
+		<Image MinDPI='120'>../../res/applications-graphics-big.bmp</Image>
+	</Command.LargeImages>
+</Command>
+
+<Command Name='cmdContextMap1' />
+	</Application.Commands>
+
+	<Application.Views>
+		<Ribbon>
+			<Ribbon.ApplicationMenu>
+<ApplicationMenu CommandName='cmdAppMenu'>
+
+</ApplicationMenu>
+			</Ribbon.ApplicationMenu>
+
+			<Ribbon.QuickAccessToolbar>
+<QuickAccessToolbar CommandName='cmdQAT'>
+
+</QuickAccessToolbar>
+			</Ribbon.QuickAccessToolbar>
+
+			<Ribbon.Tabs>
+<Tab CommandName='cmdTab1'>
+	<Group CommandName='cmdTab1Group1' SizeDefinition='OneButton'>
+		<DropDownColorPicker CommandName='cmdPicker1' ColorTemplate='ThemeColors' />
+	</Group>
+
+	<Group CommandName='cmdTab1Group2' SizeDefinition='OneButton'>
+		<DropDownColorPicker CommandName='cmdPicker2' ColorTemplate='StandardColors' />
+	</Group>
+
+	<Group CommandName='cmdTab1Group3' SizeDefinition='OneButton'>
+		<DropDownColorPicker CommandName='cmdPicker3' ColorTemplate='HighlightColors' />
+	</Group>
+</Tab>
+			</Ribbon.Tabs>
+		</Ribbon>
+
+		<ContextPopup>
+			<ContextPopup.MiniToolbars>
+<MiniToolbar Name='miniToolbar1'>
+	<MenuGroup>
+		<DropDownColorPicker CommandName='cmdPicker1' />
+		<DropDownColorPicker CommandName='cmdPicker2' />
+		<DropDownColorPicker CommandName='cmdPicker3' />
+	</MenuGroup>
+</MiniToolbar>
+			</ContextPopup.MiniToolbars>
+
+			<ContextPopup.ContextMenus>
+<ContextMenu Name='contextMenu1'>
+	<MenuGroup>
+		<DropDownColorPicker CommandName='cmdPicker1' />
+		<DropDownColorPicker CommandName='cmdPicker2' />
+		<DropDownColorPicker CommandName='cmdPicker3' />
+	</MenuGroup>
+</ContextMenu>
+			</ContextPopup.ContextMenus>
+
+			<ContextPopup.ContextMaps>
+<ContextMap CommandName='cmdContextMap1' MiniToolbar='miniToolbar1' ContextMenu='contextMenu1' />
+			</ContextPopup.ContextMaps>
+		</ContextPopup>
+	</Application.Views>
+</Application>

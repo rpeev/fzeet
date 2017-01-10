@@ -1,0 +1,5 @@
+require_relative 'core/Version'
+require_relative 'core/Point'
+require_relative 'core/Size'
+require_relative 'core/Rect'
+require_relative 'core/SystemTime'

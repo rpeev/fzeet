@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<Application xmlns='http://schemas.microsoft.com/windows/2009/Ribbon'>
+	<Application.Commands>
+<Command Name='cmdAppMenu' />
+
+<Command Name='cmdQAT' />
+
+<Command Name='cmdTab1' LabelTitle='FontControl' />
+	<Command Name='cmdTab1Group1' LabelTitle='Font&amp;Only' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+		<Command.SmallImages>
+			<Image>../../res/preferences-desktop-font-small.bmp</Image>
+			<Image MinDPI='120'>../../res/preferences-desktop-font.bmp</Image>
+		</Command.SmallImages>
+		<Command.LargeImages>
+			<Image>../../res/preferences-desktop-font.bmp</Image>
+			<Image MinDPI='120'>../../res/preferences-desktop-font-big.bmp</Image>
+		</Command.LargeImages>
+	</Command>
+	<Command Name='cmdTab1Group2' LabelTitle='FontWith&amp;Color' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+		<Command.SmallImages>
+			<Image>../../res/preferences-desktop-font-small.bmp</Image>
+			<Image MinDPI='120'>../../res/preferences-desktop-font.bmp</Image>
+		</Command.SmallImages>
+		<Command.LargeImages>
+			<Image>../../res/preferences-desktop-font.bmp</Image>
+			<Image MinDPI='120'>../../res/preferences-desktop-font-big.bmp</Image>
+		</Command.LargeImages>
+	</Command>
+	<Command Name='cmdTab1Group3' LabelTitle='&amp;RichFont' LabelDescription='LabelDescription...' TooltipDescription='TooltipDescription...'>
+		<Command.SmallImages>
+			<Image>../../res/preferences-desktop-font-small.bmp</Image>
+			<Image MinDPI='120'>../../res/preferences-desktop-font.bmp</Image>
+		</Command.SmallImages>
+		<Command.LargeImages>
+			<Image>../../res/preferences-desktop-font.bmp</Image>
+			<Image MinDPI='120'>../../res/preferences-desktop-font-big.bmp</Image>
+		</Command.LargeImages>
+	</Command>
+
+<Command Name='cmdFont1' />
+<Command Name='cmdFont2' />
+<Command Name='cmdFont3' />
+
+<Command Name='cmdContextMap1' />
+	</Application.Commands>
+
+	<Application.Views>
+		<Ribbon>
+			<Ribbon.ApplicationMenu>
+<ApplicationMenu CommandName='cmdAppMenu'>
+
+</ApplicationMenu>
+			</Ribbon.ApplicationMenu>
+
+			<Ribbon.QuickAccessToolbar>
+<QuickAccessToolbar CommandName='cmdQAT'>
+
+</QuickAccessToolbar>
+			</Ribbon.QuickAccessToolbar>
+
+			<Ribbon.Tabs>
+<Tab CommandName='cmdTab1'>
+	<Group CommandName='cmdTab1Group1'>
+		<FontControl CommandName='cmdFont1' FontType='FontOnly' />
+	</Group>
+
+	<Group CommandName='cmdTab1Group2'>
+		<FontControl CommandName='cmdFont2' FontType='FontWithColor' />
+	</Group>
+
+	<Group CommandName='cmdTab1Group3'>
+		<FontControl CommandName='cmdFont3' FontType='RichFont' />
+	</Group>
+</Tab>
+			</Ribbon.Tabs>
+		</Ribbon>
+
+		<ContextPopup>
+			<ContextPopup.MiniToolbars>
+<MiniToolbar Name='miniToolbar1'>
+	<MenuGroup Class='StandardItems'>
+		<FontControl CommandName='cmdFont1' />
+	</MenuGroup>
+</MiniToolbar>
+			</ContextPopup.MiniToolbars>
+
+			<ContextPopup.ContextMenus>
+
+			</ContextPopup.ContextMenus>
+
+			<ContextPopup.ContextMaps>
+<ContextMap CommandName='cmdContextMap1' MiniToolbar='miniToolbar1' />
+			</ContextPopup.ContextMaps>
+		</ContextPopup>
+	</Application.Views>
+</Application>
