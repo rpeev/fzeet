@@ -14,7 +14,7 @@ end
 
 desc 'Push gem'
 task :push => [:build] do |t|
-  system "gem push fzeet-#{Unknownr::VERSION}.gem"
+  system "gem push fzeet-#{Fzeet::VERSION}.gem"
 end
 
 task :default => [:test]
