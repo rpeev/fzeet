@@ -20,5 +20,5 @@ end
 task :default => [:test]
 
 if __FILE__ == $0
-  Rake::Task[:test].invoke
+  Rake::Task[:default].invoke
 end
