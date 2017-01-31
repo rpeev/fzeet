@@ -1,3 +1,22 @@
+if __FILE__ == $0
+	require 'ffi'
+
+	# FIXME: dirty fix to propagate FFI structs layout down the inheritance hierarchy
+	# TODO: switch to composition instead inheriting FFI structs
+	module PropagateFFIStructLayout
+		def inherited(child_class)
+			child_class.instance_variable_set '@layout', layout
+		end
+	end
+
+	class FFI::Struct
+		def self.inherited(child_class)
+			child_class.extend PropagateFFIStructLayout
+		end
+	end
+	# END FIXME
+end
+
 require_relative 'Common'
 
 module Fzeet
@@ -20,7 +39,7 @@ module Fzeet
 		callback :PSPCALLBACK, [:pointer, :uint, :pointer], :uint
 
 		class PROPSHEETPAGE < FFI::Struct
-			layout *[
+			layout(*[
 				:dwSize, :ulong,
 				:dwFlags, :ulong,
 				:hInstance, :pointer,
@@ -51,7 +70,7 @@ module Fzeet
 							:pszbmHeader, :pointer
 					}
 				] : nil
-			].flatten.compact
+			].flatten.compact)
 		end
 
 		attach_function :CreatePropertySheetPage, :CreatePropertySheetPageA, [:pointer], :pointer

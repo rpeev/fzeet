@@ -181,7 +181,7 @@ module Fzeet
 			self
 		end
 
-		def invalidate(rect = rect, erase = 1) Windows.DetonateLastError(0, :InvalidateRect, @handle, rect, erase); self end
+		def invalidate(r = rect, erase = 1) Windows.DetonateLastError(0, :InvalidateRect, @handle, r, erase); self end
 
 		def menu; (Handle.instance?(handle = Windows.GetMenu(@handle))) ? Handle.instance(handle) : nil end
 

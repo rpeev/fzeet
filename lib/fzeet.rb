@@ -1,8 +1,25 @@
+require 'ffi'
+
+# FIXME: dirty fix to propagate FFI structs layout down the inheritance hierarchy
+# TODO: switch to composition instead inheriting FFI structs
+module PropagateFFIStructLayout
+	def inherited(child_class)
+		child_class.instance_variable_set '@layout', layout
+	end
+end
+
+class FFI::Struct
+	def self.inherited(child_class)
+		child_class.extend PropagateFFIStructLayout
+	end
+end
+# END FIXME
+
 require_relative 'fzeet/windows'
 
-module Fzeet
-	VERSION = '0.6.7'
+FZEET_VERSION = '0.7.0'
 
+module Fzeet
 	module Windows
 		DetonateLastError(0, :InitCommonControlsEx,
 			INITCOMMONCONTROLSEX.new.tap { |icc|
@@ -23,8 +40,4 @@ module Fzeet
 
 		InitializeOle()
 	end
-end
-
-if __FILE__ == $0
-	puts Fzeet::VERSION
 end

@@ -24,7 +24,7 @@ Application.run { |window| window.dialog = true
 	window[:button2].on(:doubleclicked) { message 'on(:command, :button2, :doubleclicked)' }
 	window[:button3].
 		on(:clicked) { message 'on(:command, :button3, :clicked)' }.
-		on(:dropdown) { |args| using(
+		on(:dropdown) { |args| Fzeet.using(
 			PopupMenu.new.
 				append(:string, 'Item&1', :item1)
 		) { |popup|

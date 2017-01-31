@@ -1,4 +1,23 @@
 if __FILE__ == $0
+	require 'ffi'
+
+	# FIXME: dirty fix to propagate FFI structs layout down the inheritance hierarchy
+	# TODO: switch to composition instead inheriting FFI structs
+	module PropagateFFIStructLayout
+		def inherited(child_class)
+			child_class.instance_variable_set '@layout', layout
+		end
+	end
+
+	class FFI::Struct
+		def self.inherited(child_class)
+			child_class.extend PropagateFFIStructLayout
+		end
+	end
+	# END FIXME
+end
+
+if __FILE__ == $0
 	require_relative '../Window/Common'
 end
 require_relative 'Common'
@@ -98,8 +117,8 @@ module Fzeet
 
 		def clear; sendmsg(:resetcontent); self end
 
-		def append(item)
-			[*item].each { |item|
+		def append(items)
+			[*items].each { |item|
 				p = FFI::MemoryPointer.from_string(item.to_s)
 
 				raise 'ADDSTRING failed.' if [-1, -2].include?(sendmsg(:addstring, 0, p).tap { p.free })

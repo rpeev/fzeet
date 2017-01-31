@@ -157,7 +157,7 @@ module Fzeet
 	def flags(flags, *prefixes)
 		return flags if flags.kind_of?(Integer)
 
-		[*flags].inject(0) { |flags, flag| flags |= constant(flag, *prefixes) }
+		[*flags].inject(0) { |result, flag| result |= constant(flag, *prefixes) }
 	end
 
 	module_function :constant, :flags

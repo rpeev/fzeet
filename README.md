@@ -1,6 +1,6 @@
 # fzeet
 
-Ruby-FFI (x86) bindings to (and rubyesque APIs on top) GUI/COM-related Windows APIs
+Ruby FFI (x86) bindings to (and rubyesque APIs on top) GUI/COM related Windows APIs
 
 ![Screenshot](./screenshot.png)
 
@@ -36,3 +36,10 @@ gem install fzeet
 ## Use
 
 See examples folder
+
+## Issues
+
+- uses the ANSI versions of Windows bindings
+- declares DPI awareness, but the examples use pixel coordinates
+- uses _id2ref, so passing -X+O to jrubyw is required when running with JRuby
+- Windows version identification is outdated

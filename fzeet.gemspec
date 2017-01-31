@@ -1,19 +1,20 @@
-require File.expand_path('../lib/fzeet', __FILE__) # require_relative doesn't work here in ruby 1.9
 require 'rake'
 
-Gem::Specification.new do |s|
-  s.name = 'fzeet'
-  s.version = Fzeet::VERSION
+require_relative 'lib/fzeet'
 
-  s.summary = 'Ruby-FFI (x86) bindings to (plus rubyesque APIs on top) GUI/COM-related Windows APIs'
-  s.description = 'Ruby-FFI (x86) bindings to (plus rubyesque APIs on top) GUI/COM-related Windows APIs'
-  s.homepage = 'https://github.com/rpeev/fzeet'
+Gem::Specification.new do |spec|
+  spec.name = 'fzeet'
+  spec.version = FZEET_VERSION
 
-  s.authors = ['Radoslav Peev']
-  s.email = ['rpeev@ymail.com']
-  s.licenses = ['MIT']
+  spec.summary = 'Ruby FFI (x86) bindings to (plus rubyesque APIs on top) GUI/COM related Windows APIs'
+  spec.description = 'Ruby FFI (x86) bindings to (plus rubyesque APIs on top) GUI/COM related Windows APIs'
+  spec.homepage = 'https://github.com/rpeev/fzeet'
 
-  s.files = FileList[
+  spec.authors = ['Radoslav Peev']
+  spec.email = ['rpeev@ymail.com']
+  spec.licenses = ['MIT']
+
+  spec.files = FileList[
     'LICENSE', 'LICENSE_Scintilla',
     'README.md', 'screenshot.png',
     'RELNOTES.md',
@@ -41,6 +42,6 @@ Gem::Specification.new do |s|
     'examples/Dialog/*.*',
     'examples/UIRibbon/*.*', 'examples/UIRibbon/Control/*.*'
   ]
-  s.require_paths = ['lib']
-  s.add_runtime_dependency('ffi', '~> 1')
+  spec.require_paths = ['lib']
+  spec.add_runtime_dependency('ffi', '~> 1')
 end

@@ -1,3 +1,22 @@
+if __FILE__ == $0
+	require 'ffi'
+
+	# FIXME: dirty fix to propagate FFI structs layout down the inheritance hierarchy
+	# TODO: switch to composition instead inheriting FFI structs
+	module PropagateFFIStructLayout
+		def inherited(child_class)
+			child_class.instance_variable_set '@layout', layout
+		end
+	end
+
+	class FFI::Struct
+		def self.inherited(child_class)
+			child_class.extend PropagateFFIStructLayout
+		end
+	end
+	# END FIXME
+end
+
 require_relative 'Common'
 
 module Fzeet
@@ -242,7 +261,7 @@ module Fzeet
 		LVCFMT_SPLITBUTTON = 0x1000000
 
 		class LVCOLUMN < FFI::Struct
-			layout *[
+			layout(*[
 				:mask, :uint,
 				:fmt, :int,
 				:cx, :int,
@@ -256,7 +275,7 @@ module Fzeet
 					:cxDefault, :int,
 					:cxIdeal, :int
 				] : nil
-			].flatten.compact
+			].flatten.compact)
 		end
 
 		LVIF_TEXT = 0x00000001
@@ -279,7 +298,7 @@ module Fzeet
 		LVIS_STATEIMAGEMASK = 0xF000
 
 		class LVITEM < FFI::Struct
-			layout *[
+			layout(*[
 				:mask, :uint,
 				:iItem, :int,
 				:iSubItem, :int,
@@ -299,7 +318,7 @@ module Fzeet
 					:piColFmt, :pointer,
 					:iGroup, :int
 				] : nil
-			].flatten.compact
+			].flatten.compact)
 		end
 
 		class NMLISTVIEW < FFI::Struct

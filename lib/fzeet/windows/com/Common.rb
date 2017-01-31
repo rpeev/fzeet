@@ -109,8 +109,9 @@ module Fzeet
 						const_set(:VTBL, Class.new(FFI::Struct) {
 							const_set(:SPEC, Hash[(ifaces.map { |iface| iface::VTBL::SPEC.to_a } << spec.to_a).flatten(1)])
 
-							layout \
+							layout(
 								*self::SPEC.map { |name, signature| [name, callback(*signature)] }.flatten
+							)
 						})
 
 						layout \
@@ -159,7 +160,7 @@ module Fzeet
 						send(:include, Helpers)
 
 						def initialize(pointer)
-							self.pointer = pointer
+							super(pointer)
 
 							@vtbl = self.class::VTBL.new(self[:lpVtbl])
 						end
@@ -191,7 +192,7 @@ module Fzeet
 								raise "CoCreateInstance failed (#{self.class})." if
 									Windows.FAILED(Windows.CoCreateInstance(self.class::CLSID, nil, @opts[:clsctx], self.class::IID, ppv))
 
-								self.pointer = ppv.read_pointer
+								super(ppv.read_pointer)
 							}
 
 							@vtbl = self.class::VTBL.new(self[:lpVtbl])

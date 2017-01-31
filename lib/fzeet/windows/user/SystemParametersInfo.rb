@@ -219,7 +219,7 @@ module Fzeet
 		SPI_SETMESSAGEDURATION = 0x2017
 
 		class NONCLIENTMETRICS < FFI::Struct
-			layout *[
+			layout(*[
 				:cbSize, :uint,
 				:iBorderWidth, :int,
 				:iScrollWidth, :int,
@@ -236,7 +236,7 @@ module Fzeet
 				:lfStatusFont, LOGFONT,
 				:lfMessageFont, LOGFONT,
 				(Version >= :vista) ? [:iPaddedBorderWidth, :int] : nil
-			].flatten.compact
+			].flatten.compact)
 		end
 
 		attach_function :SystemParametersInfo, :SystemParametersInfoA, [:uint, :uint, :pointer, :uint], :int
