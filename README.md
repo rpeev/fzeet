@@ -39,7 +39,8 @@ See examples folder
 
 ## Issues
 
-- uses the ANSI versions of Windows bindings
+- uses the ANSI versions of Windows bindings (for UNICODE bindings to some essential GUI stuff check out the [windows_gui](https://rubygems.org/gems/windows_gui) gem)
 - declares DPI awareness, but the examples use pixel coordinates
 - uses _id2ref, so passing -X+O to jrubyw is required when running with JRuby
 - Windows version identification is outdated
+- there is a better than the bundled COM bindings library, check out the [windows_com](https://rubygems.org/gems/windows_com) gem
