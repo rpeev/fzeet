@@ -1,4 +1,4 @@
-# fzeet
+# Fzeet
 
 Ruby FFI (x86) bindings to (and rubyesque APIs on top) GUI/COM related Windows APIs
 
