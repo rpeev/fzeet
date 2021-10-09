@@ -1,6 +1,6 @@
 # Fzeet
 
-Ruby FFI (x86) bindings to (and rubyesque APIs on top) GUI/COM related Windows APIs
+Ruby FFI (x86) bindings to (plus rubyesque APIs on top) GUI/COM related Windows APIs
 
 ![Screenshot](./screenshot.png)
 
